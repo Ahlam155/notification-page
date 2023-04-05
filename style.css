@@ -1,0 +1,264 @@
+:root{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Ligh--grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+    --Font-size-paragraph: 16px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: auto;
+}
+/* small */
+@media(min-width:768px){
+    .container{
+        width: 750px;
+        padding-inline: 30px;
+
+    }
+}
+
+/* medium */
+@media(min-width:992px){
+    .container{
+        width: 820px;
+        padding-inline: 60px;
+
+    }
+}
+
+@media(max-width:767px){
+    .container{
+        padding-inline: 20px;
+    }
+}
+@media(max-width:590px){
+    .container{
+        padding-inline: 15px;
+    }
+}
+@media(max-width:390px){
+    .container{
+        padding-inline: 10px;
+    }
+}
+/* start header */
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 20px;
+    
+}
+header h1{
+    color: var(--Very-dark-blue);
+    font-size: 28px;
+}
+header h3{
+    color: var(--Grayish-blue);
+    cursor: pointer;
+}
+header h3:hover{
+    color: var(--Blue);
+}
+header #num{
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 2px 12px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size: 21px;
+    }
+    header h3{
+        font-size: 18px;
+    }
+    h1 #num{
+        padding: 1px 10px;
+        font-size: 18px;
+    }
+}
+@media(max-width:390px){
+    header h1{
+        font-size: 13px;
+    }
+    header h3{
+        font-size: 11px;
+    }
+    h1 #num{
+        font-size:10px ;
+        padding: 1px 8px;
+
+    }
+}
+/* end header */
+
+.notification{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+
+}
+.notification.active{
+    background-color: var(--Very-light-grayish-blue);
+}
+.content-message{
+    margin-bottom: 5px;
+}
+.avatar img{
+    width: 50px;
+}
+.avatar {
+    align-self: self-start;
+}
+.info{
+    font-size: 16px;
+    color: var(--Grayish-blue);
+    font-weight: normal;
+}
+.content-message .info a{
+    color: var(--Dark-grayish-blue);
+}
+.content-message .info a, .name{
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+.info{
+    cursor: text;
+}
+.name:hover{
+    color: var(--Blue);
+}
+#post:hover{
+    color: var(--Blue);
+}
+.time{
+    color: var(--Grayish-blue);
+}
+.message{
+    padding: 15px 20px;
+    border: 1px solid var(--Light-grayish-blue-2);
+    cursor: pointer;
+    margin-top: 10px;
+    line-height: 24px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.message:hover{
+    background-color: var(--Light-grayish-blue-2);
+}
+.chess{
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+}
+.chess img{
+    width: 40px;
+}
+@media(max-width:590px){
+    .info{
+        font-size: 13px;
+    }
+    .content-message .info a, .name{
+        font-size: 14px;
+    }
+    .message{
+        padding: 10px 15px;
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .notification{
+        gap: 15px;
+        padding: 15px;
+    }
+    .avatar img, .chess img{
+        width: 40px;
+    }
+}
+@media(max-width:449px){
+    .info{
+        font-size: 12px;
+    }
+    .content-message .info a, .name{
+        font-size: 13px;
+    }
+    .message{
+        padding: 10px;
+        line-height: 16px;
+        font-size: 12px !important;
+    }
+    .avatar img, .chess img{
+        width: 30px;
+    }
+    .time {
+    font-size: 12px;
+    }
+    .notification{
+        gap: 10px;
+    }
+}
+@media(max-width:420px){
+    .info{
+        font-size: 9px;
+    }
+    .content-message .info a, .name{
+        font-size: 9px;
+    }
+    .message{
+        padding: 8px;
+        line-height: 14px;
+        font-size: 9px !important;
+    }
+    .avatar img, .chess img{
+        width: 25px;
+    }
+    .time {
+    font-size: 10px;
+    }
+    .notification{
+        gap: 6px;
+        padding: 6px;
+    }
+}
+@media(max-width:390px){
+    .avatar img, .chess img{
+        width: 20px;
+    }
+}
+small{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: var(--Red);
+    border-radius: 50%;
+}
+@media(max-width:445px){
+    small{
+        width: 5px;
+        height: 5px;
+    }
+}
